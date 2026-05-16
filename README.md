@@ -8,6 +8,15 @@ Este repositório contém a engenharia de dados e a pipeline de **ETL (Extraçã
 
 ---
 
+## 👥 Equipe responsável
+
+- Ana Luiza [GitHub](https://github.com/AnaLuiza2431)
+- Emily Pereira [GitHub](https://github.com/Emily2311)
+- Kerollayne Akemy [GitHub](https://github.com/KerollayneAkemy)
+- Raycka Castro
+
+---
+
 ## 🛠️ A Pipeline de Dados (Apache Hop)
 
 O fluxo foi modelado utilizando o **Apache Hop** rodando via container Docker. A arquitetura da pipeline (`auxiliogas.hpl`) segue um conceito linear e performático para engenharia de dados:
