@@ -1,54 +1,110 @@
-# 📊 Pipeline ETL - Análise do Auxílio Gás & Vulnerabilidade Social
+# 📊 Pipeline ETL & Dashboard - Análise do Auxílio Gás & Vulnerabilidade Social
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
-![Fase Atual](https://img.shields.io/badge/Fase-ETL%20Conclu%C3%ADdo-success?style=for-the-badge)
-![Ferramenta](https://img.shields.io/badge/Apache%20Hop-v2.x-blue?style=for-the-badge&logo=apache)
+![Status do Projeto](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
+![Fase Atual](https://img.shields.io/badge/Fase-Dashboard%20Operacional-blue?style=for-the-badge)
 
-Este repositório contém a engenharia de dados e a pipeline de **ETL (Extração, Transformação e Carga)** desenvolvida para processar, higienizar e agregar os dados brutos governamentais sobre o programa **Auxílio Gás**, com foco analítico na evolução da chefia de família por mulheres.
-
---- 
-
-## 🚀 Em Breve: Dashboard Interativo (React + Tailwind + Recharts)
-
-A próxima fase deste projeto consiste no desenvolvimento da camada de entrega visual (Frontend). O dashboard consumirá diretamente os dados estruturados por esta pipeline.
+Este repositório contém a engenharia de dados, a pipeline de **ETL (Extração, Transformação e Carga)** desenvolvida no Apache Hop e a camada visual em React focada no mapeamento e auditoria dos dados do programa **Auxílio Gás**, com ênfase analítica na evolução da chefia de família por mulheres.
 
 ---
 
-## 👥 Equipe responsável
+## 🛠️ Tecnologias Utilizadas
 
-- Ana Luiza [GitHub](https://github.com/AnaLuiza2431)
-- Emily Pereira [GitHub](https://github.com/Emily2311)
-- Kerollayne Akemy [GitHub](https://github.com/KerollayneAkemy)
-- Raycka Castro
+### 🛢️ Engenharia de Dados e Infraestrutura
+[![Apache Hop](https://img.shields.io/badge/Apache%20Hop-8A2BE2?style=for-the-badge&logo=apache-hop&logoColor=white)](https://hop.apache.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+### 🎨 Frontend
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+
+---
+
+## 👥 Equipe e Divisão de Responsabilidades
+
+O projeto foi dividido de forma modular entre a engenharia de dados (esteiras de ETL no Apache Hop) e o desenvolvimento da interface gerencial:
+
+* **Ana Luiza** [GitHub](https://github.com/AnaLuiza2431) — Engenharia de Dados: Desenvolvimento da *Pipeline 1 (Evolução Financeira e Time Intelligence)*.
+* **Emily Pereira** [GitHub](https://github.com/Emily2311) — Engenharia de Dados: Co-desenvolvedora das *Pipelines 2 (Mapeamento Geográfico)* e *3 (Densidade de Chefia Familiar Feminina)*.
+* **Kerollayne Akemy** [GitHub](https://github.com/KerollayneAkemy) — Engenharia de Dados: Co-desenvolvedora das *Pipelines 2 (Mapeamento Geográfico)* e *3 (Densidade de Chefia Familiar Feminina)*.
+* **Raycka Castro** — Engenharia de Software & Frontend: Arquitetura, desenvolvimento do **Dashboard Interativo** (React, Tailwind CSS, Recharts) e integração ponta a ponta dos dados gerados pelo ETL.
 
 ---
 
 ## 🛠️ Arquitetura da Pipeline de Dados (Apache Hop)
 
-O fluxo de extração, transformação e carga (ETL) foi modelado utilizando o **Apache Hop** rodando em container Docker. Em vez de processar uma única massa de dados bruta no front-end, a engenharia de dados foi dividida de forma modular em **3 pipelines analíticas** independentes. Cada uma delas foi projetada para responder a uma dor de negócio específica e alimentar um quadrante exclusivo do Dashboard React, aplicando técnicas de **Roll-up (OLAP)** que otimizaram o tamanho dos arquivos finais em mais de 99%.
+O fluxo de extração, transformação e carga (ETL) foi modelado utilizando o **Apache Hop** rodando em containers Docker. Em vez de processar uma única massa de dados bruta no front-end (o que travaria o navegador do usuário), a engenharia de dados mitigou a complexidade agregando as regras de negócio em **3 pipelines analíticas independentes**, aplicando técnicas de agregação que otimizaram drasticamente a performance de leitura do Dashboard.
 
 ---
 
-### 1. Pipeline de Evolução Financeira (Time Intelligence)
+### 1. Pipeline 01: Evolução Financeira (Time Intelligence)
+*Desenvolvido por: Ana Luiza*
+
 Responsável por estruturar a linha do tempo histórica do benefício para análises de crescimento, queda e sazonalidade.
-* **`Text File Input`**: Carga dos microdados brutos do Auxílio Gás.
-* **`Strings cut`**: Decomposição cirúrgica da coluna textual conjunta `anomes` (ex: "202512") isolando as dimensões temporais independentes de `ano` (posições 0 a 4) e `mes` (posições 4 a 6).
-* **`Memory Group by`**: Agrupamento por Ano e Mês, aplicando a sumarização (`Sum`) no volume de famílias beneficiadas. 
-* **Foco no Dashboard**: Permite a criação de gráficos de linha temporais com navegação dinâmica e efeito de **Drill-down** (expandir o ano para visualizar os meses).
 
-### 2. Pipeline de Mapeamento Geográfico (Macro-Regiões)
-Projetada para eliminar a necessidade de joins pesados no navegador do usuário, subindo o nível de granularidade dos dados.
-* **`Strings cut & Join`**: Extração dos dois primeiros dígitos do `codigo_ibge` municipal para identificar o Estado e cruzamento com tabela auxiliar para trazer o nome do Estado por extenso e sua respectiva Região administrativa.
-* **`Memory Group by`**: Consolidação macro-econômica. Os dados deixam a granularidade de município e sobem para o nível de **Estado e Região**, aplicando a soma do volume total de famílias atendidas.
-* **Foco no Dashboard**: Alimenta componentes de mapas interativos (Choropleth Maps) e gráficos de distribuição regional de alta performance.
+![Fluxo da Pipeline 01](./images/pipeline_evolucao_financeira.png) (em breve a imagem sera adicionada)
 
-### 3. Pipeline de Densidade de Chefia Familiar Feminina (Fatiamento de Vulnerabilidade)
-Focada em auditoria analítica e isolamento de indicadores de extrema vulnerabilidade social, tratando exceções matemáticas.
-* **`Filter rows (Anti-Zero)`**: Filtro estratégico de segurança que barra qualquer município com inconsistência de dados ou com total de famílias zerado (`qtd_fam_benef_aux_gas > 0`), blindando o motor do Apache Hop contra erros fatais de divisão por zero (`java.lang.ArithmeticException: / by zero`).
-* **`Calculator`**: Recálculo manual e validação da taxa de responsabilidade familiar dividindo a quantidade de mulheres chefes pelo total de famílias (`A / B`) e multiplicando pela constante (`A * B`), garantindo a precisão do indicador de gênero.
-* **`Filter rows (Corte de 90%)`**: Fatiamento de dados baseado em regra de negócio estrita, isolando apenas as regiões onde a chefia feminina é esmagadora (superior a 90%).
-* **`Memory Group by`**: Agrupamento macro por Estado calculando a média real (`Average`) do percentual e integrando o valor médio financeiro recebido.
-* **Foco no Dashboard**: Alimenta cards de KPIs de destaque, alertas de criticidade e rankings de estados com maior índice de chefia feminina.
+#### 🗂️ Saída: `dados_evolucaofinanceira.csv`
 
 ---
 
+### 2. Pipeline 02: Mapeamento Geográfico dos Repasses
+*Desenvolvido por: Emily Pereira & Kerollayne Akemy*
+
+Projetada para eliminar a necessidade de joins pesados em runtime, subindo o nível de granularidade dos dados e integrando bases distintas do Governo e do IBGE.
+
+![Fluxo da Pipeline 02](./images/pipeline_mapeamento_geografico.png) (em breve a imagem sera adicionada)
+
+#### 🗂️ Saída: `dados_ibge_map.csv`
+
+---
+
+### 3. Pipeline 03: Densidade de Chefia Familiar Feminina
+*Desenvolvido por: Emily Pereira & Kerollayne Akemy*
+
+Focada em auditoria analítica e isolamento de indicadores de extrema vulnerabilidade social, tratando exceções matemáticas e aplicando fatiamento estrito de regras de negócio.
+
+![Fluxo da Pipeline 03](./images/pipeline_chefia_feminina.png) (em breve a imagem sera adicionada)
+
+#### 🗂️ Saída: `dados_chefia.csv`
+
+---
+
+## 💻 Camada de Entrega: Dashboard Gerencial (React)
+*Desenvolvido por: Raycka Castro*
+
+O frontend consome diretamente as saídas otimizadas geradas pelas esteiras de ETL do Apache Hop. A arquitetura foi planejada usando **React 18**, estilização com **Tailwind CSS** para alta densidade de dados em modo escuro (*Dark Mode*) e gráficos de performance com **Recharts**.
+
+### Funcionalidades Implementadas:
+* **Filtros Demográficos Dinâmicos:** Controles reativos que permitem isolar a análise temporal por Mês de Referência e por Unidade Federativa (UF).
+* **Chefia Cards (KPIs de Alto Nível):** * *Mães Chefe de Família:* Volume bruto e absoluto consolidado do indicador carregado.
+    * *Volume Injetado:* Cruzamento de dados através do cálculo financeiro real de impacto ($\text{Quantidade Média de Mulheres} \times \text{Valor Médio do Benefício}$).
+    * *Maior Concentração & Cota do Benefício:* Exibição de picos históricos e médias de repasse por linha de auditoria.
+* **Distribuição de Mães Chefe por Região:** Gráficos de barras interativos com formatação simplificada em milhares (K) e Tooltips customizadas.
+* **Tabela de Auditoria do Apache Hop:** Uma tabela integrada diretamente na aba de Chefia Familiar que serve como espelho e validação do banco de dados gerado no ETL, exibindo a visão limpa por Competência (`Mês/Ano`), `Localidade (UF)`, `Média da Chefia Feminina` e `Valor Médio Recebido`.
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### Camada de Dados (Apache Hop)
+1. Certifique-se de possuir o Apache Hop (GUI ou via Container) configurado.
+2. Importe os arquivos `.hpl` contidos na pasta `/pipelines`.
+3. Certifique-se de mapear os arquivos CSV brutos do governo na pasta de inputs.
+
+### Camada Visual (Frontend)
+1. Instale as dependências na pasta raiz do painel:
+   ```bash
+   npm install
+   ```
+   
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+   
+3. O painel estará disponível localmente no endereço indicado pelo Vite:
+   ```bash
+   http://localhost:5173
+   ```
