@@ -1,8 +1,8 @@
-interface Props {
+export interface PropsInsight {
   estadoFiltro: string | null;
 }
 
-export default function Insight({ estadoFiltro }: Props) {
+export default function Insight({ estadoFiltro }: PropsInsight) {
   return (
     <div className="text-xs text-slate-400 border-t border-slate-800 pt-4">
       {estadoFiltro || "Brasil"} apresentou crescimento de 12,5% no último período, com pico em Novembro.

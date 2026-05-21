@@ -3,7 +3,7 @@ import Panel from "@/components/shared/Panel";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { deCodigoParaSigla } from "@/types/dashboard";
 
-interface TabelaCompetenciasProps {
+export interface TabelaCompetenciasProps {
   dados: any[];
 }
 

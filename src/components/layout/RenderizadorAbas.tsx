@@ -9,7 +9,7 @@ import { RenderizadorAbasProps } from "@/types/dashboard";
 import MapaRegioes from "@/dashboard/mapa-regioes/mapa-regioes";
 import MapeamentoCards from "@/components/mapeamento/MapeamentoCards";
 
-interface PropsEstendidas extends RenderizadorAbasProps {
+export interface PropsEstendidas extends RenderizadorAbasProps {
   dadosMapeamentoCsv?: any[];
 }
 

@@ -1,6 +1,6 @@
 import { Sliders } from "lucide-react";
 
-interface DispersaoUrbanaCardProps {
+export interface DispersaoUrbanaCardProps {
   taxaConcentracao: number;
 }
 

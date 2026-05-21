@@ -1,6 +1,6 @@
 import { TrendingUp, TrendingDown } from "lucide-react";
 
-interface BadgePorcentagemProps {
+export interface BadgePorcentagemProps {
   value: string | number;
 }
 

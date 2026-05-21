@@ -2,7 +2,7 @@ import { GeoJSON, MapContainer } from "react-leaflet";
 import { extrairSigla, obterEstado } from "@/constants/helpers";
 import { SiglaEstado } from "@/constants/mapaBrasil";
 
-interface Props {
+export interface Props {
   geoJsonData: any;
   dadosCsv: any[];
   estadoSelecionado: string | null;

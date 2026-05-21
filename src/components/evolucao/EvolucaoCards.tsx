@@ -1,10 +1,16 @@
 import { LucideIcon, TrendingUp, Flame, BarChart3, Trophy } from "lucide-react";
 
-interface CardProps {
+export interface CardProps {
   icon: LucideIcon;
   label: string;
   value: string;
   colorClass: string;
+}
+
+export interface EvolucaoCardsProps {
+  crescimento: string;
+  picoMes: string;
+  mediaFormatada: string;
 }
 
 function Card({ icon: Icon, label, value, colorClass }: CardProps) {
@@ -23,11 +29,6 @@ function Card({ icon: Icon, label, value, colorClass }: CardProps) {
   );
 }
 
-interface EvolucaoCardsProps {
-  crescimento: string;
-  picoMes: string;
-  mediaFormatada: string;
-}
 
 export default function EvolucaoCards({
   crescimento,

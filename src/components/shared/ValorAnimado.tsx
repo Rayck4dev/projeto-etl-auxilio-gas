@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-interface ValorAnimadoProps {
+export interface ValorAnimadoProps {
   value: number;
   isCurrency?: boolean;
   precision: number;

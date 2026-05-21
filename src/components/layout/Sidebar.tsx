@@ -2,12 +2,12 @@ import { ReactNode } from "react";
 import { LayoutDashboard, BarChart3, Users, Map } from "lucide-react";
 import { TabDashboard } from "@/types/dashboard";
 
-interface SidebarProps {
+export interface SidebarProps {
   abaAtiva: TabDashboard;
   onMudarAba: (aba: TabDashboard) => void;
 }
 
-interface SidebarIconProps {
+export interface SidebarIconProps {
   icon: ReactNode;
   active: boolean;
   label: string;

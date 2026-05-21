@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import EvolucaoCards from "@/components/evolucao/EvolucaoCards";
 import EvolucaoGrafico from "@/components/evolucao/EvolucaoGrafico";
 
-interface Props {
+export interface PropsEvolucaoLinha {
   estadoFiltro: string | null;
 }
 
@@ -28,7 +28,7 @@ const formatarNumeroCompacto = (num: number) => {
   return num.toString();
 };
 
-export default function EvolucaoLinha({ estadoFiltro }: Props) {
+export default function EvolucaoLinha({ estadoFiltro }: PropsEvolucaoLinha) {
   const [dados, setDados] = useState<any[]>([]);
 
   useEffect(() => {

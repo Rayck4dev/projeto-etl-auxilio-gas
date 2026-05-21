@@ -5,7 +5,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import EvolucaoLinha from "@/dashboard/evolucao/evolucao";
 import { DadosTemporais } from "@/types/dashboard";
 
-interface PaginaTemporalProps {
+export interface PaginaTemporalProps {
   estadoFiltro: string | null;
   dadosEvolucao: DadosTemporais[];
 }

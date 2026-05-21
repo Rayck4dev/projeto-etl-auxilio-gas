@@ -1,4 +1,4 @@
-interface Props {
+export interface PropsPainelInfo {
   dadosCsv?: any[];
   estadoSelecionado: string | null;
 }
@@ -6,7 +6,7 @@ interface Props {
 export default function PainelInfo({
   dadosCsv = [],
   estadoSelecionado,
-}: Props) {
+}: PropsPainelInfo) {
   const brasilSelecionado = !estadoSelecionado;
 
   const normalizar = (valor: string) => valor?.trim().toUpperCase();

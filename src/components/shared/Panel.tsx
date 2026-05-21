@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-interface PanelProps {
+export interface PanelProps {
   children: ReactNode;
   className?: string;
 }

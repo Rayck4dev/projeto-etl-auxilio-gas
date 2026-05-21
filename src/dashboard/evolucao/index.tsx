@@ -2,7 +2,7 @@ import GraficoLinha from "@/dashboard/evolucao/evolucao";
 import Metricas from "@/dashboard/evolucao/metricas";
 import Insight from "@/dashboard/evolucao/insight";
 
-interface Props {
+export interface Props {
   estadoFiltro: string | null;
 }
 

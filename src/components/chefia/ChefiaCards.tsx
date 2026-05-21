@@ -128,7 +128,6 @@ export default function PaginaChefiaFamiliar({
         />
       </div>
 
-      {/* 3. A TABELA LOGO ABAIXO DOS CARDS */}
       <div className="pt-2">
         <TabelaCompetenciasHop dados={dadosFiltrados} />
       </div>

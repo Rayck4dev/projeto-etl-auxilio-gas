@@ -1,58 +1,3 @@
-export interface EvolucaoFinanceira {
-  ano: string;
-  mes: string;
-  total_familias: number;
-}
-
-export interface MapeamentoGeografico {
-  ano: string;
-  mes: string;
-  estado: string;
-  regiao: string;
-  total_familias: number;
-}
-
-export interface MapaRegioesProps {
-  onSelecionarEstado: (estado: string | null) => void;
-  estadoSelecionado: string | null;
-}
-
-export interface DensidadeChefia {
-  ano: string;
-  mes: string;
-  cod_estado: string;
-  media_chefia_feminina: number;
-  valor_medio_recebido: number;
-}
-
-export type TabDashboard =
-  | "dashboard"
-  | "analytics"
-  | "users"
-  | "map"
-  | "database";
-
-export interface DadosTemporais {
-  mes: string;
-  valor: number;
-  rawMes: string;
-}
-
-export interface DadosTemporais {
-  ano: string;
-  mes: string;
-  valor: number;
-  rawMes: string;
-}
-
-export interface DadosChefia {
-  ano: string;
-  mes: string;
-  cod_estado: string;
-  media_chefia_feminina: number;
-  valor_medio_recebido: number
-}
-
 export const deCodigoParaSigla: Record<string, string> = {
   "11": "RO",
   "12": "AC",
@@ -112,6 +57,60 @@ export const nomesOficiais: Record<string, string> = {
   "52": "Goiás",
   "53": "Distrito Federal",
 };
+export interface EvolucaoFinanceira {
+  ano: string;
+  mes: string;
+  total_familias: number;
+}
+
+export interface MapeamentoGeografico {
+  ano: string;
+  mes: string;
+  estado: string;
+  regiao: string;
+  total_familias: number;
+}
+
+export interface MapaRegioesProps {
+  onSelecionarEstado: (estado: string | null) => void;
+  estadoSelecionado: string | null;
+}
+
+export interface DensidadeChefia {
+  ano: string;
+  mes: string;
+  cod_estado: string;
+  media_chefia_feminina: number;
+  valor_medio_recebido: number;
+}
+
+export type TabDashboard =
+  | "dashboard"
+  | "analytics"
+  | "users"
+  | "map"
+  | "database";
+
+export interface DadosTemporais {
+  mes: string;
+  valor: number;
+  rawMes: string;
+}
+
+export interface DadosTemporais {
+  ano: string;
+  mes: string;
+  valor: number;
+  rawMes: string;
+}
+
+export interface DadosChefia {
+  ano: string;
+  mes: string;
+  cod_estado: string;
+  media_chefia_feminina: number;
+  valor_medio_recebido: number;
+}
 
 export interface PaginaChefiaProps {
   estadoFiltro: string | null;

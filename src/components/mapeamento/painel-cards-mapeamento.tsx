@@ -3,7 +3,7 @@ import MassaRelativaCard from "@/components/mapeamento/MassaRelativaCard";
 import DispersaoUrbanaCard from "@/components/mapeamento/DispersaoUrbanaCard";
 import BalancoRegioesCard from "@/components/mapeamento/BalançoRegioesCard";
 
-interface PainelCardsMapeamentoProps {
+export interface PainelCardsMapeamentoProps {
   dadosCsv: any[];
   estadoSelecionado: string | null;
 }

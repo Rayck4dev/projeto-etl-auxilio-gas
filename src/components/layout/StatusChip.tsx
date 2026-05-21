@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface StatusChipProps {
+export interface StatusChipProps {
   icon: ReactNode;
   text: string;
 }

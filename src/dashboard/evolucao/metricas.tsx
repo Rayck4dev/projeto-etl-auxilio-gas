@@ -1,8 +1,8 @@
-interface Props {
+export interface PropsMetricas {
   estadoFiltro: string | null;
 }
 
-export default function Metricas({ estadoFiltro }: Props) {
+export default function Metricas({ estadoFiltro }: PropsMetricas) {
   return (
     <div className="grid grid-cols-3 gap-3">
       <Card titulo="Pipeline" valor="2025" />
@@ -10,7 +10,7 @@ export default function Metricas({ estadoFiltro }: Props) {
       <Card titulo="Filtro" valor={estadoFiltro || "Brasil"} />
 
       <Card titulo="Status" valor="Live" />
-    </div>
+    </div>  
   );
 }
 

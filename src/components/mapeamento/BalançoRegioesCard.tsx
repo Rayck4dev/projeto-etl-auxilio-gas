@@ -1,6 +1,6 @@
 import { BarChart3 } from "lucide-react";
 
-interface BalancoRegioesCardProps {
+export interface BalancoRegioesCardProps {
   regioesOrd: string[];
   regioesMapeadasRaw: Record<string, number>;
   mapaSiglas: Record<string, string>;

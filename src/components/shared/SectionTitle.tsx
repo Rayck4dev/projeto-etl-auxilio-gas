@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface SectionTitleProps {
+export interface SectionTitleProps {
   icon: ReactNode;
   title: string;
 }

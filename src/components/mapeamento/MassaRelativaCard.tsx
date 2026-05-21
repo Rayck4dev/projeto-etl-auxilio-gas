@@ -1,6 +1,6 @@
 import { Layers3 } from "lucide-react";
 
-interface MassaRelativaCardProps {
+export interface MassaRelativaCardProps {
   totalLocal: number;
   pctParticipacao: number;
 }

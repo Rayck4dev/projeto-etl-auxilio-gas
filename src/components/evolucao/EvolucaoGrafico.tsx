@@ -9,7 +9,7 @@ import {
   ReferenceLine,
 } from "recharts";
 
-interface EvolucaoGraficoProps {
+export interface EvolucaoGraficoProps {
   dados: any[];
   media: number;
   formatarNumeroCompacto: (num: number) => string;

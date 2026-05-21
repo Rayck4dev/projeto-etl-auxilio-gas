@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface KpiCardProps {
+export interface KpiCardProps {
   icon: ReactNode;
   title: string;
   value: string | number;
