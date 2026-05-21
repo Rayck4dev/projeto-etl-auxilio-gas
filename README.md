@@ -43,7 +43,7 @@ O fluxo de extração, transformação e carga (ETL) foi modelado utilizando o *
 
 Responsável por estruturar a linha do tempo histórica do benefício para análises de crescimento, queda e sazonalidade.
 
-![Fluxo da Pipeline 01](./images/pipeline_evolucao_financeira.png) (em breve a imagem sera adicionada)
+![Fluxo da Pipeline 01](./images_pipelines/evolucao_financeira.png)
 
 #### 🗂️ Saída: `dados_evolucaofinanceira.csv`
 
@@ -54,7 +54,7 @@ Responsável por estruturar a linha do tempo histórica do benefício para anál
 
 Projetada para eliminar a necessidade de joins pesados em runtime, subindo o nível de granularidade dos dados e integrando bases distintas do Governo e do IBGE.
 
-![Fluxo da Pipeline 02](./images/pipeline_mapeamento_geografico.png) (em breve a imagem sera adicionada)
+![Fluxo da Pipeline 02](./images_pipelines/mapeamento_geo.png)
 
 #### 🗂️ Saída: `dados_ibge_map.csv`
 
@@ -65,7 +65,7 @@ Projetada para eliminar a necessidade de joins pesados em runtime, subindo o ní
 
 Focada em auditoria analítica e isolamento de indicadores de extrema vulnerabilidade social, tratando exceções matemáticas e aplicando fatiamento estrito de regras de negócio.
 
-![Fluxo da Pipeline 03](./images/pipeline_chefia_feminina.png) (em breve a imagem sera adicionada)
+![Fluxo da Pipeline 03](./images_pipelines/densidade_familiar.png)
 
 #### 🗂️ Saída: `dados_chefia.csv`
 
@@ -90,7 +90,7 @@ O frontend consome diretamente as saídas otimizadas geradas pelas esteiras de E
 
 ### Camada de Dados (Apache Hop)
 1. Certifique-se de possuir o Apache Hop (GUI ou via Container) configurado.
-2. Importe os arquivos `.hpl` contidos na pasta `/pipelines`.
+2. Importe os arquivos `.hpl` contidos na pasta `./pipelines`.
 3. Certifique-se de mapear os arquivos CSV brutos do governo na pasta de inputs.
 
 ### Camada Visual (Frontend)
