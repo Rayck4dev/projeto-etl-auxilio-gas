@@ -1,7 +1,7 @@
 import Papa from "papaparse";
 import { useEffect, useState } from "react";
 
-import MapaBrasil from "./components/MapaBrasil";
+import MapaBrasil from "./components/ChefiaCards";
 import GraficoRegiao from "./components/GraficoRegiao";
 
 import type { DadosMapeamento } from "./types/dados";
