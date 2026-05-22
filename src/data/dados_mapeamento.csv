@@ -1,0 +1,157 @@
+ano,mes,estado,regiao,total_familias
+2025,02,Roraima,Norte,18228
+2025,12,Paraíba,Nordeste,193346
+2025,08,Minas Gerais,Sudeste,434554
+2025,10,Maranhão,Nordeste,279464
+2025,10,Rio Grande do Sul,Sul,152451
+2025,08,Mato Grosso do Sul,Centro-Oeste,46039
+2025,04,Espírito Santo,Sudeste,77585
+2025,08,Goiás,Centro-Oeste,61387
+2025,04,Mato Grosso,Centro-Oeste,40127
+2025,10,Tocantins,Norte,27973
+2025,04,Piauí,Nordeste,214946
+2025,06,Amazonas,Norte,122487
+2025,06,Distrito Federal,Centro-Oeste,53901
+2025,12,Minas Gerais,Sudeste,366095
+2025,08,Rondônia,Norte,8887
+2025,10,Sergipe,Nordeste,59701
+2025,12,Paraná,Sul,107890
+2025,12,Mato Grosso do Sul,Centro-Oeste,39974
+2025,10,Rio Grande do Norte,Nordeste,128938
+2025,06,Rio Grande do Sul,Sul,167222
+2025,06,Tocantins,Norte,29688
+2025,10,Santa Catarina,Sul,51530
+2025,06,Bahia,Nordeste,637476
+2025,02,Pernambuco,Nordeste,422772
+2025,08,Alagoas,Nordeste,131436
+2025,06,Paraná,Sul,140543
+2025,10,Distrito Federal,Centro-Oeste,49706
+2025,12,Goiás,Centro-Oeste,55122
+2025,06,Rio Grande do Norte,Nordeste,135019
+2025,06,Amapá,Norte,30626
+2025,02,Ceará,Nordeste,392131
+2025,04,Maranhão,Nordeste,293055
+2025,08,Paraíba,Nordeste,223999
+2025,12,Tocantins,Norte,25807
+2025,02,Pará,Norte,259146
+2025,10,Bahia,Nordeste,608181
+2025,04,Santa Catarina,Sul,58582
+2025,12,Amazonas,Norte,113097
+2025,10,Amapá,Norte,29208
+2025,04,Acre,Norte,49660
+2025,04,Sergipe,Nordeste,62287
+2025,12,Rio Grande do Sul,Sul,133440
+2025,06,Piauí,Nordeste,214501
+2025,02,Espírito Santo,Sudeste,78455
+2025,02,Goiás,Centro-Oeste,64423
+2025,02,Rio de Janeiro,Sudeste,528723
+2025,10,Acre,Norte,47213
+2025,12,Amapá,Norte,27657
+2025,12,Maranhão,Nordeste,257986
+2025,08,Amazonas,Norte,120812
+2025,02,Mato Grosso,Centro-Oeste,40552
+2025,10,Piauí,Nordeste,205582
+2025,10,Paraná,Sul,127516
+2025,08,Rio Grande do Sul,Sul,161149
+2025,06,Rondônia,Norte,9123
+2025,10,Pernambuco,Nordeste,401609
+2025,04,Tocantins,Norte,29724
+2025,12,Rio Grande do Norte,Nordeste,113547
+2025,04,Distrito Federal,Centro-Oeste,53951
+2025,04,Ceará,Nordeste,389725
+2025,12,Rondônia,Norte,7918
+2025,12,Roraima,Norte,15349
+2025,04,Bahia,Nordeste,639544
+2025,08,Rio Grande do Norte,Nordeste,130444
+2025,04,Pernambuco,Nordeste,419861
+2025,02,Mato Grosso do Sul,Centro-Oeste,49121
+2025,06,Maranhão,Nordeste,292641
+2025,08,Roraima,Norte,16996
+2025,08,Amapá,Norte,29567
+2025,04,Pará,Norte,257163
+2025,02,Santa Catarina,Sul,59709
+2025,06,Acre,Norte,49650
+2025,02,Minas Gerais,Sudeste,466006
+2025,02,Sergipe,Nordeste,62631
+2025,02,Paraíba,Nordeste,233356
+2025,04,Paraná,Sul,140883
+2025,02,Alagoas,Nordeste,137613
+2025,04,Goiás,Centro-Oeste,63985
+2025,08,Mato Grosso,Centro-Oeste,38246
+2025,12,Acre,Norte,45528
+2025,08,Piauí,Nordeste,208481
+2025,12,Pernambuco,Nordeste,344585
+2025,04,Rio de Janeiro,Sudeste,524157
+2025,06,Pará,Norte,256991
+2025,04,Minas Gerais,Sudeste,460362
+2025,10,Ceará,Nordeste,370162
+2025,10,Alagoas,Nordeste,129115
+2025,12,Piauí,Nordeste,184874
+2025,08,Pernambuco,Nordeste,407071
+2025,02,Tocantins,Norte,29985
+2025,02,Amazonas,Norte,123220
+2025,02,Distrito Federal,Centro-Oeste,54419
+2025,10,Pará,Norte,243669
+2025,04,Rondônia,Norte,9126
+2025,08,Espírito Santo,Sudeste,72688
+2025,12,Espírito Santo,Sudeste,61042
+2025,02,Amapá,Norte,30837
+2025,02,Rio Grande do Sul,Sul,174400
+2025,06,Ceará,Nordeste,389026
+2025,10,Rondônia,Norte,8588
+2025,08,Sergipe,Nordeste,60555
+2025,02,Bahia,Nordeste,644048
+2025,10,Roraima,Norte,16466
+2025,08,Santa Catarina,Sul,53793
+2025,06,Pernambuco,Nordeste,419010
+2025,02,Rio Grande do Norte,Nordeste,136077
+2025,08,Acre,Norte,47981
+2025,12,Mato Grosso,Centro-Oeste,34018
+2025,08,Maranhão,Nordeste,283349
+2025,04,Paraíba,Nordeste,231951
+2025,06,Roraima,Norte,17927
+2025,02,Paraná,Sul,142887
+2025,04,Alagoas,Nordeste,136604
+2025,04,Mato Grosso do Sul,Centro-Oeste,48549
+2025,10,Rio de Janeiro,Sudeste,480144
+2025,08,Tocantins,Norte,28522
+2025,10,Paraíba,Nordeste,221071
+2025,06,Mato Grosso,Centro-Oeste,40056
+2025,02,Piauí,Nordeste,216347
+2025,10,Mato Grosso do Sul,Centro-Oeste,44838
+2025,06,Goiás,Centro-Oeste,63843
+2025,06,Rio de Janeiro,Sudeste,523606
+2025,08,Pará,Norte,248041
+2025,06,Minas Gerais,Sudeste,459152
+2025,12,Ceará,Nordeste,330056
+2025,12,Alagoas,Nordeste,116767
+2025,04,Amazonas,Norte,122466
+2025,08,Distrito Federal,Centro-Oeste,50762
+2025,08,Ceará,Nordeste,375840
+2025,12,Sergipe,Nordeste,52172
+2025,06,Espírito Santo,Sudeste,77485
+2025,12,Santa Catarina,Sul,44973
+2025,10,Minas Gerais,Sudeste,423146
+2025,12,Pará,Norte,226760
+2025,04,Rio Grande do Sul,Sul,167269
+2025,02,Rondônia,Norte,9245
+2025,12,Rio de Janeiro,Sudeste,411549
+2025,06,Sergipe,Nordeste,62199
+2025,08,Bahia,Nordeste,616237
+2025,06,Alagoas,Nordeste,136218
+2025,08,Paraná,Sul,131901
+2025,02,Maranhão,Nordeste,294620
+2025,10,Espírito Santo,Sudeste,70531
+2025,04,Amapá,Norte,30626
+2025,06,Santa Catarina,Sul,58409
+2025,08,Rio de Janeiro,Sudeste,493537
+2025,06,Paraíba,Nordeste,231205
+2025,04,Rio Grande do Norte,Nordeste,135246
+2025,12,Bahia,Nordeste,528798
+2025,10,Mato Grosso,Centro-Oeste,37343
+2025,06,Mato Grosso do Sul,Centro-Oeste,48458
+2025,12,Distrito Federal,Centro-Oeste,44282
+2025,10,Goiás,Centro-Oeste,60326
+2025,04,Roraima,Norte,17945
+2025,10,Amazonas,Norte,118707
+2025,02,Acre,Norte,49993
