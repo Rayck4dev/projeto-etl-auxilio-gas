@@ -1,5 +1,5 @@
 [build]
-  base = "meu-portifolio"
+  base = "dashboard-auxilio-gas"
   command = "npm run build"
   publish = "dist"
 
